@@ -1,0 +1,49 @@
+{
+    "name": "Typicode",
+    "types": {
+        "User": {
+            "id": "ID!",
+            "name": "String"
+        }
+    },
+    "queries": {
+        "users": {
+            "type": "[User]",
+            "resolve": {
+                "type": "rest",
+                "url": "https://jsonplaceholder.typicode.com/users"
+            }
+        },
+        "user": {
+            "type": "User",
+            "args": {
+                "id": "ID!"
+            },
+            "resolve": {
+                "type": "rest",
+                "url": "https://jsonplaceholder.typicode.com/users/{{id}}"
+            }
+        }
+    },
+    "mutations": {
+        "addUser": {
+            "type": "User",
+            "args": {
+                "name": "String!"
+            },
+            "resolve": {
+                "type": "rest",
+                "method": "post",
+                "url": "https://jsonplaceholder.typicode.com/users",
+                "headers": {
+                    "Content-type": "application/json; charset=UTF-8"
+                },
+                "body": {
+                    "name": "{{name}}"
+                }
+            }
+        }
+    },
+    "shouldRunQueries": true,
+    "shouldRunMutations": true
+}

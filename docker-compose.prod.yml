@@ -1,0 +1,38 @@
+version: '2.1'
+services:
+
+    postgres:
+        image: postgres:11
+        ports:
+            - ${PG_PORT}:5432
+        environment:
+            POSTGRES_USER: ${PG_USERNAME}
+            POSTGRES_PASSWORD: ${PG_PASSWORD}
+            POSTGRES_DB: ${PG_DATABASE}
+        volumes:
+            - ${HUMBLE_DATA}/pg-prod:/var/lib/postgresql/data
+            - ${HUMBLE_BACKUP}:/backup
+        restart: always
+
+    webapp:
+        build:
+            context: ./services/webapp
+            dockerfile: Dockerfile
+            args:
+                REACT_APP_ID: ${REACT_APP_ID}
+                REACT_APP_NAME: ${REACT_APP_NAME}
+        environment:
+            REACT_APP_ID: ${REACT_APP_ID}
+            REACT_APP_NAME: ${REACT_APP_NAME}
+            PG_HOST: ${PG_HOST}
+            PG_PORT: ${PG_PORT}
+            PG_USERNAME: ${PG_USERNAME}
+            PG_PASSWORD: ${PG_PASSWORD}
+            PG_DATABASE: ${PG_DATABASE}
+            JWT_SECRET: ${JWT_SECRET}
+            JWT_DURATION: ${JWT_DURATION}
+            BCRYPT_ROUNDS: ${BCRYPT_ROUNDS}
+        ports:
+            - ${HUMBLE_PORT}:8080
+        restart: always
+

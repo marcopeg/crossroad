@@ -1,0 +1,78 @@
+{
+  "name": "crossroad",
+  "description": "GraphQL API Aggreator Service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "----- // CRA DEFAULT SCRIPTS // -----": "",
+    "start": "yarn clean && yarn build && cross-env NODE_ENV=production node index",
+    "build": "yarn build:app && yarn build:node",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "----- // START SCRIPTS // -----": "",
+    "start:api:quick": "cross-env NODE_ENV=production node index",
+    "start:api": "yarn build:node && cross-env NODE_ENV=production node index",
+    "start:dev": "yarn && concurrently \"yarn start:dev:api\" \"yarn start:dev:app\"",
+    "start:dev:api": "cross-env NODE_ENV=development nodemon --watch ssr -e js --watch node_build/app index.js",
+    "start:dev:app": "react-scripts start",
+    "----- // BUILD SCRIPTS // -----": "",
+    "build:app": "react-scripts build && mkdir -p node_build && rm -rf ./node_build/app && mv build node_build/app",
+    "build:src": "cross-env NODE_ENV=production babel src --out-dir node_build/src --copy-files",
+    "build:ssr": "cross-env NODE_ENV=production babel ssr --out-dir node_build/ssr",
+    "build:locale": "yarn build:src && node ./node_modules/@forrestjs/core/lib/react-intl-pack.js",
+    "build:node": "yarn build:src && yarn build:ssr",
+    "----- // CLEANING SCRIPTS // -----": "",
+    "clean:npm": "rm -rf ./node_modules",
+    "clean": "rm -rf node_build && rm -rf build",
+    "reset": "yarn clean && yarn clean:npm",
+    "----- // STYLEGUIDIST UTILITIES // -----": "",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "----- // GITBOOK UTILITIES // -----": "",
+    "book:install": "node_modules/.bin/gitbook install",
+    "book:serve": "node_modules/.bin/gitbook serve",
+    "book:build": "node_modules/.bin/gitbook build . docs",
+    "book:publish": "yarn book:install && yarn book:build && git add ./docs && git commit -m \"gitbook\" && git push",
+    "book": "yarn book:install && yarn book:serve",
+    "----- // HEROKU UTILITIES // -----": "",
+    "heroku-postbuild": "yarn build",
+    "heroku:deploy": "git push heroku master",
+    "heroku:logs": "heroku logs --tail"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@forrestjs/eslint-config-universal"
+    ]
+  },
+  "eslintIgnore": [
+    "/.docker-volumes/**/*",
+    "/node_modules/**/*",
+    "/node_build/**/*",
+    "/build/**/*",
+    "/docs/**/*",
+    "/pages/**/*",
+    "/public/**/*"
+  ],
+  "babel": {
+    "presets": [
+      "@forrestjs/babel-preset-universal"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@forrestjs/package-universal": "^3.3.1",
+    "es6-promise": "^4.2.6",
+    "graphql-extension": "^0.2.8",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "@forrestjs/package-universal-dev": "^3.3.0",
+    "babel-polyfill": "^6.26.0"
+  }
+}

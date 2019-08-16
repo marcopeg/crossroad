@@ -1,0 +1,63 @@
+{
+  "__type": "gql",
+  "name": "TypicodeGQL",
+  "shouldRunQueries": true,
+  "shouldRunMutations": true,
+  "types": [
+    {
+      "name": "User",
+      "fields": [
+        { "name": "id", "type": "ID!" },
+        { "name": "name", "type": "String!" }
+      ]
+    }
+  ],
+  "inputTypes": [
+    { "name": "UserInput", "fields": [{ "name": "id", "type": "ID!" }] }
+  ],
+  "queries": [
+    {
+      "name": "users",
+      "type": "[User]",
+      "resolve": {
+        "type": "rest",
+        "url": "https://jsonplaceholder.typicode.com/users/"
+      }
+    },
+    {
+      "name": "user",
+      "args": [{ "name": "id", "type": "ID!" }],
+      "type": "User!",
+      "resolve": {
+        "type": "rest",
+        "url": "https://jsonplaceholder.typicode.com/users/{{id}}"
+      }
+    },
+    {
+      "name": "continents",
+      "type": "JSON",
+      "resolve": {
+        "type": "graphql",
+        "url": "https://countries.trevorblades.com/",
+        "query": "{ continents { code name }}",
+        "grab": "data.continents"
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "name": "addUser",
+      "args": [{ "name": "name", "type": "String!" }],
+      "type": "JSON",
+      "resolve": {
+        "type": "rest",
+        "url": "https://jsonplaceholder.typicode.com/users",
+        "method": "POST",
+        "headers": [
+          { "name": "Content-type", "value": "application/json; charset=UTF-8" }
+        ],
+        "body": [{ "name": "name", "value": "{{name}}" }]
+      }
+    }
+  ]
+}

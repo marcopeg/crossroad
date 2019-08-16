@@ -1,0 +1,33 @@
+{
+    "name": "Trevorblades",
+    "types": {
+        "Continent": {
+            "code": "ID!",
+            "name": "String"
+        }
+    },
+    "queries": {
+        "continents": {
+            "type": "[Continent]",
+            "resolve": {
+                "type": "graphql",
+                "url": "https://countries.trevorblades.com/",
+                "query": "{ continents { code name }}",
+                "grab": "data.continents"
+            }
+        },
+        "continent": {
+            "type": "Continent",
+            "args": {
+                "code": "String!"
+            },
+            "resolve": {
+                "type": "graphql",
+                "url": "https://countries.trevorblades.com/",
+                "query": "query foo ($code: String!) { continent (code: $code) { code name }}",
+                "grab": "data.continent"
+            }
+        }
+    },
+    "shouldRunQueries": true
+}
