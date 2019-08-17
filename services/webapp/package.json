@@ -34,11 +34,7 @@
     "book:serve": "node_modules/.bin/gitbook serve",
     "book:build": "node_modules/.bin/gitbook build . docs",
     "book:publish": "yarn book:install && yarn book:build && git add ./docs && git commit -m \"gitbook\" && git push",
-    "book": "yarn book:install && yarn book:serve",
-    "----- // HEROKU UTILITIES // -----": "",
-    "heroku-postbuild": "yarn build",
-    "heroku:deploy": "git push heroku master",
-    "heroku:logs": "heroku logs --tail"
+    "book": "yarn book:install && yarn book:serve"
   },
   "eslintConfig": {
     "extends": [
