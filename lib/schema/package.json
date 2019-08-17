@@ -1,5 +1,5 @@
 {
-  "name": "@crossroad/client",
+  "name": "@crossroad/schema",
   "description": "Utility library to query a Crossroad server and register an extension",
   "version": "0.2.12",
   "author": "Marco Pegoraro <marco.pegoraro@gmail.com",
@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "clone": "^2.1.2",
-    "jsonwebtoken": "^8.5.1"
+    "@forrestjs/hooks": "^3.3.0",
+    "fs-extra": "^8.1.0",
+    "graphql-extension": "^0.2.10",
+    "graphql-type-json": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -17,19 +19,18 @@
     "@forrestjs/babel-preset-package": "^2.9.4",
     "cross-env": "^5.2.0"
   },
-  "homepage": "https://github.com/marcopeg/crossroad/tree/master/lib/client#readme",
+  "homepage": "https://github.com/marcopeg/crossroad/tree/master/lib/schema#readme",
   "keywords": [
     "graphql",
-    "api",
-    "client",
-    "extension",
-    "crossroad"
+    "schema",
+    "extend",
+    "api"
   ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/marcopeg/crossroad/tree/master/lib/client",
+  "repository": "https://github.com/marcopeg/crossroad/tree/master/lib/schema",
   "scripts": {
     "clean": "rm -rf node_modules && rm -f yarn.lock && rm -f package-lock.json",
     "test": "jest",

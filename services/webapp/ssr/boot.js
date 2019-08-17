@@ -103,9 +103,9 @@ export default createHookApp({
         // require('./features/feature-journal'),
 
         // Crossroad
-        require('./services/crossroad-schema'),
-        require('./features/crossroad-registry'),
-        require('./features/crossroad-manager'),
-        require('./features/crossroad-rules'),
+        require('@crossroad/schema'),
+        require('@crossroad/registry'),
+        require('@crossroad/manager'),
+        require('@crossroad/rules'),
     ],
 })
