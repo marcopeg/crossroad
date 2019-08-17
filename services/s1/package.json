@@ -12,7 +12,10 @@
     "lint": "eslint .",
     "----- // START SCRIPTS // -----": "",
     "start:api:quick": "cross-env NODE_ENV=production node index",
-    "start:dev:api": "cross-env NODE_ENV=development nodemon --watch ssr -e js --watch node_build/app index.js"
+    "start:dev:api": "cross-env NODE_ENV=development nodemon --watch ssr -e js --watch node_build/app index.js",
+    "----- // CLEANING SCRIPTS // -----": "",
+    "clean": "rm -rf node_build",
+    "reset": "yarn clean"
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +43,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@crossroad/client": "^0.2.11",
+    "@crossroad/crossroad": "^0.2.13",
     "@forrestjs/package-universal": "^3.2.0",
     "fs-extra": "^8.0.1",
     "isomorphic-fetch": "^2.2.1"

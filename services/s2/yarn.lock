@@ -1015,14 +1015,60 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@crossroad/client@^0.2.11":
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/@crossroad/client/-/client-0.2.11.tgz#73ae44d04473b3e8ee0e6bde076c4046946b4068"
-  integrity sha512-anA0/kUsd7V+2QP5JQsfh0/aq44txm24AD6i7zkTAEsmAFgYC/iUtJvBzhxYsSTR6bhH0L/QOuHY4XTdoLpABg==
+"@crossroad/client@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@crossroad/client/-/client-0.2.13.tgz#38b2d8a7c5f89316242ea29b70a75947b5e9ceb2"
+  integrity sha512-sg5V3E1DWGvl90PItyF4qh6b0cjyF7DmsM0rqxVO0nwyj3fQtdjrurdNLYcUlrSQAewnDAHpNK28uJUPbF0PzA==
   dependencies:
     "@babel/runtime" "^7.5.5"
     clone "^2.1.2"
     jsonwebtoken "^8.5.1"
+
+"@crossroad/crossroad@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@crossroad/crossroad/-/crossroad-0.2.13.tgz#971a2e8e6c691705d27ca7337690176c553da840"
+  integrity sha512-lduAECP50pss00GQ0Y/h3cTzYNnkphKSB5LFecMHTIy6Wa/sSTA4KtEZLlyBZvzQS6G94GWcaGvsjvyTOGIK4Q==
+  dependencies:
+    "@crossroad/client" "^0.2.13"
+    "@crossroad/manager" "^0.2.13"
+    "@crossroad/registry" "^0.2.13"
+    "@crossroad/rules" "^0.2.13"
+    "@crossroad/schema" "^0.2.13"
+
+"@crossroad/manager@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@crossroad/manager/-/manager-0.2.13.tgz#418954f3d8de1820a7d3f0ac356f977b3e8dccab"
+  integrity sha512-xETVC+2PMixwuzhXFSv1J28r9DWRErWkwYtgw5HTxSdAPeiBGhrGRpUskDVX3Lb1BEy5w8zZMrGDPftn2hfJIA==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+
+"@crossroad/registry@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@crossroad/registry/-/registry-0.2.13.tgz#35f65698c61d4bb18632ae1c56ebe5aefef41904"
+  integrity sha512-sq8xtTm7zuG2M3Ivx37NurUYzkHH1xE05GzUtsYm3UhqmsDXM9OcTdByctg3AKz7hjPzt7ZRyW2dssaxcwgvMQ==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@crossroad/schema" "^0.2.13"
+
+"@crossroad/rules@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@crossroad/rules/-/rules-0.2.13.tgz#6f40c548d86325b45d21d0d8c188a5a6f88b7114"
+  integrity sha512-98RR3RkOVXgJWLHX4W9FDvRArEKrq3leTWw5zMSc8FU/6Yn/6CEBURoDhQJZiTu1m7jSep4AmfYVi/UwC/YC7w==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@crossroad/manager" "^0.2.13"
+    "@crossroad/schema" "^0.2.13"
+
+"@crossroad/schema@^0.2.13":
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/@crossroad/schema/-/schema-0.2.13.tgz#dea3c6e611d68f09c9456b8fcab9029ea74a8944"
+  integrity sha512-9RTqorVS+DbGei+G6pe6tcSAeNWRy8YPdLRnMEftuj20BvFIyAEvCaSXK3l0t/ao04cFaZzMR/V3HimE6uUxxQ==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@forrestjs/hooks" "^3.3.0"
+    fs-extra "^8.1.0"
+    graphql-extension "^0.2.10"
+    graphql-type-json "^0.3.0"
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
@@ -1138,6 +1184,14 @@
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@forrestjs/hooks/-/hooks-3.2.0.tgz#cc9787a777576fb99a342ed787ece3f7f7e1e677"
   integrity sha512-yqnlkoWTEfB1p0XRbqUhk2/dTKvt4mrCKICGy8/yXr0DpXFZishxvBy2mZykPcgGsKj2ACmUd5mVoWDDs44NiA==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@marcopeg/dotted" "^0.2.0"
+
+"@forrestjs/hooks@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@forrestjs/hooks/-/hooks-3.3.0.tgz#ad126c3d775421e19c3018b819833269d115221f"
+  integrity sha512-RE/lSVyZ4yaMS8yOEocCwfNpEP22OvIuV1bWKGMKVAsFldtbv+JyndnTn8xADbI5Y0yE54uY9JW1JHOQgjpZuQ==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@marcopeg/dotted" "^0.2.0"
@@ -1482,6 +1536,21 @@
   integrity sha512-DJ0uTN6HEvnzsLDB2MGWtOEb+xoMCAp628sbGbzucAgsGcaJ3s6a4CYO2FBh0F5VnjR3DQw/4RKsjyM23iKbXw==
   dependencies:
     "@babel/runtime" "^7.4.4"
+
+"@marcopeg/dotted@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@marcopeg/dotted/-/dotted-0.2.9.tgz#f48c08daa136d89c9084b4e6b1341c6929366cce"
+  integrity sha512-3pz8jyRAFMmwYZf1RJXTrocA7hNYNgMiHeifcOb5VPaPYtB3eZ83HT//5Ij4ac50SNYeQ4b+T4TYI9GOEYUegw==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+
+"@marcopeg/template@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@marcopeg/template/-/template-0.2.9.tgz#6820bca20c4a6f4ec88cc245d138004c081a1a89"
+  integrity sha512-q6cxYGCYqX7+h0j9GsTe3YfeL8bJaSMqAswqDX2+dNvV7wcc8q6iLZYjp/PW261S8oSER1QMVgM5UZO6Gu1UvA==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@marcopeg/dotted" "^0.2.9"
 
 "@marcopeg/utils@^2.0.1":
   version "2.0.1"
@@ -3391,6 +3460,15 @@ clone-deep@^2.0.1:
     kind-of "^6.0.0"
     shallow-clone "^1.0.0"
 
+clone-deep@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/clone-deep/-/clone-deep-4.0.1.tgz#c19fd9bdbbf85942b4fd979c84dcf7d5f07c2387"
+  integrity sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==
+  dependencies:
+    is-plain-object "^2.0.4"
+    kind-of "^6.0.2"
+    shallow-clone "^3.0.0"
+
 clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
@@ -5216,6 +5294,17 @@ fecha@^2.3.3:
   resolved "https://registry.yarnpkg.com/fecha/-/fecha-2.3.3.tgz#948e74157df1a32fd1b12c3a3c3cdcb6ec9d96cd"
   integrity sha512-lUGBnIamTAwk4znq5BcqsDaxSmZ9nDVJaij6NvRt/Tg4R69gERA+otPKbS86ROw9nxVMw2/mp1fnaiWqbs6Sdg==
 
+fetch-resolver@^0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/fetch-resolver/-/fetch-resolver-0.2.10.tgz#79fcb9d1012eb5d15db048350fdc556944dbc7af"
+  integrity sha512-dyXxZbP8kY+udDa1/+MyECLHAO7WI51LzZLtZXuI705WzUB6LdkMo9wAqyX3g0nBmUuRSb1I4SVvbuLetGWHlA==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@marcopeg/dotted" "^0.2.9"
+    "@marcopeg/template" "^0.2.9"
+    clone-deep "^4.0.1"
+    isomorphic-fetch "^2.2.1"
+
 figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
@@ -5344,6 +5433,13 @@ flat-cache@^2.0.1:
     flatted "^2.0.0"
     rimraf "2.6.3"
     write "1.0.3"
+
+flat@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/flat/-/flat-4.1.0.tgz#090bec8b05e39cba309747f1d588f04dbaf98db2"
+  integrity sha512-Px/TiLIznH7gEDlPXcUD4KnBusa6kR6ayRUVcnEAbreRIuhkqow/mun59BuRXwoYk7ZQOLW1ZM05ilIvK38hFw==
+  dependencies:
+    is-buffer "~2.0.3"
 
 flatted@^2.0.0:
   version "2.0.1"
@@ -5505,7 +5601,7 @@ fs-extra@^4.0.2:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^8.0.1:
+fs-extra@^8.0.1, fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -5914,6 +6010,18 @@ graceful-fs@~4.1.11, graceful-fs@~4.1.6:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
+
+graphql-extension@^0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/graphql-extension/-/graphql-extension-0.2.10.tgz#622b0f405ea075a322f13c1b9ed5de3882d41439"
+  integrity sha512-zQwvFtBu8HlIwhzoxHb3GivF9aYBjxOSTe8V9D8TrIwfphwptrB0pT/8r6sSitWJOnJrz0glCa+VQGTe0P/B+Q==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@marcopeg/dotted" "^0.2.9"
+    "@marcopeg/template" "^0.2.9"
+    fetch-resolver "^0.2.10"
+    flat "^4.1.0"
+    graphql-type-json "^0.3.0"
 
 graphql-type-json@^0.3.0:
   version "0.3.0"
@@ -6738,7 +6846,7 @@ is-buffer@^1.0.2, is-buffer@^1.1.5:
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
-is-buffer@^2.0.0:
+is-buffer@^2.0.0, is-buffer@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
   integrity sha512-U15Q7MXTuZlrbymiz95PJpZxu8IlipAp4dtS3wOdgPXx3mqBnslrWU14kxfHB+Py/+2PVKSr37dMAgM2A4uArw==
@@ -12344,6 +12452,13 @@ shallow-clone@^1.0.0:
     is-extendable "^0.1.1"
     kind-of "^5.0.0"
     mixin-object "^2.0.1"
+
+shallow-clone@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/shallow-clone/-/shallow-clone-3.0.1.tgz#8f2981ad92531f55035b01fb230769a40e02efa3"
+  integrity sha512-/6KqX+GVUdqPuPPd2LxDDxzX6CAbjJehAAOKlNpqqUpAqPM6HeL8f+o3a+JsyGjn2lv0WY8UsTgUJjU9Ok55NA==
+  dependencies:
+    kind-of "^6.0.2"
 
 shallowequal@^1.0.1:
   version "1.1.0"
