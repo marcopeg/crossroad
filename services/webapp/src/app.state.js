@@ -12,7 +12,6 @@ const features = [
     require('features/locale'),
     require('features/login'),
     require('features/pages'),
-    require('features/journal'),
 ]
 
 export const createState = createSSRState(reducers, features)

@@ -1,0 +1,41 @@
+{
+  "name": "@crossroad/client",
+  "description": "Utility library to query a Crossroad server and register an extension",
+  "version": "0.2.11",
+  "author": "Marco Pegoraro <marco.pegoraro@gmail.com",
+  "bugs": {
+    "url": "https://github.com/marcopeg/npm-packages/issues"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "clone": "^2.1.2",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@forrestjs/babel-preset-package": "^2.9.4",
+    "cross-env": "^5.2.0"
+  },
+  "homepage": "https://github.com/marcopeg/npm-packages/tree/master/packages/crossroad-client#readme",
+  "keywords": [
+    "graphql",
+    "api",
+    "client",
+    "extension",
+    "crossroad"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/marcopeg/npm-packages/tree/master/packages/crossroad-client",
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -f yarn.lock && rm -f package-lock.json",
+    "test": "jest",
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "watch:to": "babel -w src --out-dir \"${TARGET}/node_modules/${npm_package_name}\" --ignore **/__tests__"
+  }
+}

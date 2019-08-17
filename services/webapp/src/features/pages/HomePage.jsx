@@ -10,9 +10,7 @@ const HomePage = () => (
 )
 
 const HomePagePublic = () => (
-    <div>
-        <Link to="/login">LogIN</Link>
-    </div>
+    <div>Crossroad</div>
 )
 
 export default withAuth({ fallback: HomePagePublic })(HomePage)

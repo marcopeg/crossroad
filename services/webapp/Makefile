@@ -3,9 +3,9 @@
 #
 
 # Running container's name
-organization?=marcopeg
-name?=crossroad
-version:= $(shell node -p "require('../../project.json').version")
+organization?=$(shell node -p "require('../../package.json').organization")
+name?=$(shell node -p "require('../../package.json').name")
+version:=$(shell node -p "require('../../package.json').version")
 
 # Docker image tag name
 tag?=${organization}/${name}

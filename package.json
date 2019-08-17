@@ -1,0 +1,9 @@
+{
+  "name": "crossroad",
+  "version": "0.0.0",
+  "organization": "marcopeg",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  }
+}
