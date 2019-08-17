@@ -1,7 +1,7 @@
 {
   "name": "@crossroad/client",
   "description": "Utility library to query a Crossroad server and register an extension",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "author": "Marco Pegoraro <marco.pegoraro@gmail.com",
   "bugs": {
     "url": "https://github.com/marcopeg/npm-packages/issues"
