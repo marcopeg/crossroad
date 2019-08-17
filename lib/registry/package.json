@@ -1,14 +1,14 @@
 {
   "name": "@crossroad/registry",
   "description": "Store GraphQL extensions definitions into Postgres",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "author": "Marco Pegoraro <marco.pegoraro@gmail.com",
   "bugs": {
     "url": "https://github.com/marcopeg/crossroad/issues"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@crossroad/schema": "0.2.12"
+    "@crossroad/schema": "^0.2.13"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

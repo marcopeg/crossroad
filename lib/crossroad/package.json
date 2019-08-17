@@ -1,31 +1,30 @@
 {
-    "name": "@crossroad/crossroad",
-    "version": "0.2.12",
-    "description": "ForrestJS Dependencies package for the \"starter-universal\" and similar apps.",
-    "main": "index.js",
-    "author": "Marco Pegoraro <marco.pegoraro@gmail.com",
-    "homepage": "https://github.com/marcopeg/crossroad/tree/master/lib/crossroad#readme",
-    "repository": "https://github.com/marcopeg/crossroad/tree/master/lib/crossroad",
-    "bugs": {
-      "url": "https://github.com/marcopeg/crossroad/issues"
-    },
-    "keywords": [
-      "crossroad",
-      "package"
-    ],
-    "license": "MIT",
-    "publishConfig": {
-      "access": "public"
-    },
-    "scripts": {
-      "clean": "rm -rf node_modules && rm -f yarn.lock && rm -f package-lock.json"
-    },
-    "dependencies": {
-      "@crossroad/client": "0.2.12",
-      "@crossroad/schema": "0.2.12",
-      "@crossroad/registry": "0.2.12",
-      "@crossroad/manager": "0.2.12",
-      "@crossroad/rules": "0.2.12"
-    }
+  "name": "@crossroad/crossroad",
+  "version": "0.2.13",
+  "description": "ForrestJS Dependencies package for the \"starter-universal\" and similar apps.",
+  "main": "index.js",
+  "author": "Marco Pegoraro <marco.pegoraro@gmail.com",
+  "homepage": "https://github.com/marcopeg/crossroad/tree/master/lib/crossroad#readme",
+  "repository": "https://github.com/marcopeg/crossroad/tree/master/lib/crossroad",
+  "bugs": {
+    "url": "https://github.com/marcopeg/crossroad/issues"
+  },
+  "keywords": [
+    "crossroad",
+    "package"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -f yarn.lock && rm -f package-lock.json"
+  },
+  "dependencies": {
+    "@crossroad/client": "^0.2.13",
+    "@crossroad/manager": "^0.2.13",
+    "@crossroad/registry": "^0.2.13",
+    "@crossroad/rules": "^0.2.13",
+    "@crossroad/schema": "^0.2.13"
   }
-  
+}
