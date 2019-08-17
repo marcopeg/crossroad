@@ -1,5 +1,5 @@
 import { createHookApp } from '@forrestjs/hooks'
-import path from 'path'
+// import path from 'path'
 
 require('es6-promise').polyfill()
 require('isomorphic-fetch')
@@ -84,23 +84,19 @@ export default createHookApp({
         //     registerMiddleware(require('body-parser').urlencoded({ extended: true }))
         // } ],
 
-        // require('@forrestjs/service-express-cookies'),
-        // require('@forrestjs/service-express-request'),
-        // require('@forrestjs/service-express-device'),
-        // require('@forrestjs/service-express-session'),
+        require('@forrestjs/service-express-cookies'),
+        require('@forrestjs/service-express-request'),
+        require('@forrestjs/service-express-device'),
+        require('@forrestjs/service-express-session'),
 
         require('@forrestjs/service-express-ssr'),
         require('@forrestjs/feature-locale'),
     ],
     features: [
-        // require('./features/graphql-version'),
-
-        // require('./features/feature-pg-session'),
-        // require('./features/feature-pg-session-info'),
-        // require('./features/feature-pg-session-history'),
-        // require('./features/feature-pg-auth'),
-        // require('./features/feature-passport'),
-        // require('./features/feature-journal'),
+        // Generic Auth Stuff
+        require('@forrestjs/feature-pg-session'),
+        require('@forrestjs/feature-pg-session-info'),
+        require('@forrestjs/feature-pg-auth'),
 
         // Crossroad
         require('@crossroad/schema'),

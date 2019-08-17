@@ -44,12 +44,10 @@
   ],
   "dependencies": {
     "@crossroad/crossroad": "^0.2.13",
-    "@forrestjs/package-universal": "^3.2.0",
-    "fs-extra": "^8.0.1",
-    "isomorphic-fetch": "^2.2.1"
+    "@forrestjs/package-universal": "^3.4.3"
   },
   "devDependencies": {
-    "@forrestjs/package-universal-dev": "^3.2.0",
+    "@forrestjs/package-universal-dev": "^3.4.3",
     "babel-polyfill": "^6.26.0"
   }
 }
