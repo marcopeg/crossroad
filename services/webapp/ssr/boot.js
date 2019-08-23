@@ -5,7 +5,7 @@ require('es6-promise').polyfill()
 require('isomorphic-fetch')
 
 export default createHookApp({
-    trace: true,
+    // trace: true,
     settings: async ({ setConfig, getEnv }) => {
         setConfig('postgres.connections', [{
             host: getEnv('PG_HOST'),
@@ -85,11 +85,11 @@ export default createHookApp({
         // } ],
 
         require('@forrestjs/service-express-cookies'),
-        require('@forrestjs/service-express-request'),
-        require('@forrestjs/service-express-device'),
         require('@forrestjs/service-express-session'),
+        // require('@forrestjs/service-express-request'),
+        // require('@forrestjs/service-express-device'),
 
-        require('@forrestjs/service-express-ssr'),
+        // require('@forrestjs/service-express-ssr'),
         require('@forrestjs/feature-locale'),
     ],
     features: [
@@ -98,10 +98,13 @@ export default createHookApp({
         require('@forrestjs/feature-pg-session-info'),
         require('@forrestjs/feature-pg-auth'),
 
-        // Crossroad
+        // Crossroad API
         require('@crossroad/schema'),
         require('@crossroad/registry'),
         require('@crossroad/manager'),
         require('@crossroad/rules'),
+
+        // Crossroad Admin Panel
+        require('./features/static-files'),
     ],
 })

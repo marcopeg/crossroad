@@ -1,0 +1,33 @@
+/* https://coolors.co/44af69-f8333c-fcab10-2b9eb3-dbd5b5 */
+
+.wrapper {
+    padding: 10vh 5vw;
+}
+
+.wrapper h2 {
+    color: var(--color-text);
+}
+
+.wrapper input {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-text);
+}
+
+.wrapper input:focus {
+    border: 1px solid var(--color-primary);
+}
+
+.wrapper button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-white);
+    text-align: left;
+}

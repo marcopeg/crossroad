@@ -8,8 +8,8 @@ const loginQuery = `
         $passw:String!
     ) {
         login (
-        uname: $uname
-        passw:$passw
+            uname: $uname
+            passw:$passw
         ) {
             id
         }

@@ -25,23 +25,26 @@ img {
     height: auto;
 }
 
+button:focus, input:focus {outline:0;}
+
 /**
  * Global Styles
  */
-
-html, body, #root {
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 0;
-    background: yellow; */
-}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
+}
+
+:root {
+    --color-white: #fff;
+    --color-theme: #2B9EB3;
+    --color-text: #444;
+    --color-primary: var(--color-theme);
+    --color-secondary: #DBD5B5;
+    --color-success: #44AF69;
+    --color-danger: #F8333C;
+    --color-warning: #FCAB10;
 }

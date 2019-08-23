@@ -1,16 +1,16 @@
 import React from 'react'
 import { withAuth } from 'features/login'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { Login } from 'features/auth'
 
 const HomePage = () => (
     <div>
-        <Link to="/journal">Journal APP</Link><br />
-        <Link to="/ui">Ui Tests</Link><br />
+        Crossroad!
     </div>
 )
 
 const HomePagePublic = () => (
-    <div>Crossroad</div>
+    <Login />
 )
 
 export default withAuth({ fallback: HomePagePublic })(HomePage)
